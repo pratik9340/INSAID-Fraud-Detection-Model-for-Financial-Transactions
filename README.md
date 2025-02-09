@@ -11,3 +11,11 @@ Expectations: Your task is to execute the process for proactive detection of fra
 6. Do these factors make sense? If yes, How? If not, How not?
 7. What kind of prevention should be adopted while company update its infrastructure?
 8. Assuming these actions have been implemented, how would you determine if they work?
+
+
+In the file Data_Read_Null.ipynb
+Reading data from .csv (Comma Separated Value) file into DataFrame using pandas 
+# Identify numerical features
+# Identify categorical features
+#Find the number of missing values in Pandas
+#NaN (Not a Number) and None are treated as missing values in Pandas.

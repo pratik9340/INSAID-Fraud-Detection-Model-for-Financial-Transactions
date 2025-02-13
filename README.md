@@ -42,7 +42,7 @@ Any NaN values are automatically excluded. To ignore any non-numeric values, use
 By plotting the correlation matrix in grayscale, the color code for black is 0 and the color code for white is 255 in grayscale
  This Correlation matrix looks fairly good, therefore the Correlation between the same column is high, like corr between the amount-amount column is 1 high positive Correlation. This means that we can find the column which is highly correlated positively or negatively to each other or with the target column. On this basis, we can verify/make various assumptions that hold true for further analysis of the model.
 
- 8). Getting Variance Inflation Factor (VIF) to check for multi-collinearity 
+8). Getting Variance Inflation Factor (VIF) to check for multi-collinearity 
 Variance Inflation Factor (VIF) provides a measure of multicollinearity among the independent variables in a multiple regression model.
 VIF Interpretation: VIF > 5 or 10 indicates high multicollinearity, and you may consider dropping the variable.
 This approach helps you decide which variables to drop based on redundancy.
@@ -52,3 +52,17 @@ This approach helps you decide which variables to drop based on redundancy.
  2   oldbalanceDest   68.524775
  Now as per VIF Interpretation the dropped column will be  newbalanceOrig,newbalanceDest 
  Again finding the VIF for the remaining columns to check the multicollinearity
+ Here the VIF is less than 5, and hence mod_num_col is the new feature to analyze the model
+ 
+9). Splitting data for the training and testing of the different model
+ Now the new data frame, feature for Splittng and training model
+ Here is the count of target column value count where 0 is not fraud, 1 is fraud
+ Model Training: as observed isFraud column there is a class imbalance which means
+ Fraud transactions were much lower than non-fraudulent ones
+ 
+ Firstly will use simple train_test_split (without handling class imbalance)
+ secondly will use train_test_split (with handling class imbalance , stratify = y )
+ 
+10). Model Building using Logistic Regression model from sklearn linear_model and model evaluation metrics accuracy_score, classification_report, confusion_matrix
+
+Key insight after the Logistic Regression model with training through train_test_split:

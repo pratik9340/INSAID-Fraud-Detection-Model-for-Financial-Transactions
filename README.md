@@ -1,17 +1,17 @@
 # INSAID-Fraud-Detection-Model-for-Financial-Transactions
 
-Expectations: Your task is to execute the process for proactive detection of fraud while answering following questions.
+Expectations: Your task is to execute the process for proactive detection of fraud while answering the following questions.
 
-1. Data cleaning including missing values, outliers and multi-collinearity.
+1. Data cleaning including missing values, outliers, and multi-collinearity.
 2. Describe your fraud detection model in elaboration.
 3. How did you select variables to be included in the model?
-4. Demonstrate the performance of the model by using best set of tools.
-5. What are the key factors that predict fraudulent customer?
+4. Demonstrate the performance of the model by using the best set of tools.
+5. What are the key factors that predict fraudulent customers?
 6. Do these factors make sense? If yes, How? If not, How not?
-7. What kind of prevention should be adopted while company update its infrastructure?
+7. What kind of prevention should be adopted while the company updates its infrastructure?
 8. Assuming these actions have been implemented, how would you determine if they work?
 
-Here there is a step-by-step process in which the above objective is acheived
+Here there is a step-by-step process in which the above objective is achieved
 
 1) Reading data from .csv (Comma Separated Value) file into DataFrame using pandas 
 
@@ -26,7 +26,7 @@ Hence the data is large converting column values to logarithmic values for bette
 4) Analysis of data of Column 'type' in the data frame
 Here, the Categorical column type of transaction is important Whereas other Categorical columns like 'nameOrig', 'nameDest' Don't contain any significance toward the model training, analysis, or prediction.
 Here is some interesting insight from the data of column 'type' 
-Transaction type TRANSFER, CASH_OUT are most prone to get fraud whereas other types of transactions 'PAYMENT', 'DEBIT', and 'CASH_IN' doesn't have any fraud cases reported
+Transaction type TRANSFER, CASH_OUT are most prone to get fraud whereas other types of transactions 'PAYMENT', 'DEBIT', and 'CASH_IN' don't have any fraud cases reported
 
 5). Plotting histogram to further analysis of fraud case in TRANSFER, CASH_OUT, Also finding min, max, and mean of amount column that is fraud in TRANSFER, CASH_OUT
 
@@ -66,3 +66,13 @@ This approach helps you decide which variables to drop based on redundancy.
 10). Model Building using Logistic Regression model from sklearn linear_model and model evaluation metrics accuracy_score, classification_report, confusion_matrix
 
 Key insight after the Logistic Regression model with training through train_test_split:
+
+
+11). Feature Scaling the input feature 
+     Logistic Regression is sensitive to the scale of the input features.
+
+i).  Using StandardScaler for feature scaling 
+Key insight after the Logistic Regression model with training through using feature scaling StandardScaler:
+
+ii). Using MinMaxScaler from sklearn.preprocessing
+Key insight after the Logistic Regression model with training through using feature scaling MinMaxScaler:

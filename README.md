@@ -76,3 +76,9 @@ Key insight after the Logistic Regression model with training through using feat
 
 ii). Using MinMaxScaler from sklearn.preprocessing
 Key insight after the Logistic Regression model with training through using feature scaling MinMaxScaler:
+
+12).  Creating Model Selection: Evaluated Decision Tree
+i).   Model Training and Prediction: Two models are trained: one using the Gini impurity criterion and 
+      the other using Entropy criterion and predictions are made using both models.
+ii).  Model Evaluation: Both models are evaluated using confusion matrix, accuracy, and classification report.
+iii). Visualization: The decision trees for both models are visualized using plot_tree from sklearn.tree.

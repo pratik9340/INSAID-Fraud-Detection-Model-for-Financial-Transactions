@@ -68,8 +68,7 @@ This approach helps you decide which variables to drop based on redundancy.
 Key insight after the Logistic Regression model with training through train_test_split:
 
 
-11). Feature Scaling the input feature 
-     Logistic Regression is sensitive to the scale of the input features.
+11). Feature Scaling As we are aware Logistic Regression is sensitive to the scaling of the input features.
 
 i).  Using StandardScaler for feature scaling 
 Key insight after the Logistic Regression model with training through using feature scaling StandardScaler:
@@ -77,8 +76,18 @@ Key insight after the Logistic Regression model with training through using feat
 ii). Using MinMaxScaler from sklearn.preprocessing
 Key insight after the Logistic Regression model with training through using feature scaling MinMaxScaler:
 
-12).  Creating Model Selection: Evaluated Decision Tree
+Insightful result from the above model
+As seen in the above result here is the interesting insight which is as follows:
+a).  Using simple train_test_split the Accuracy score achieved of 0.9987
+b).  Using stratified sampling to handle class imbalance the Accuracy score achieved of 0.9987
+i).  StandardScaler: Using this feature scaling the Accuracy score: of 0.9346 significantly decreases as compared with the above model(a,b)
+ii). MinMaxScaler:   Using this feature scaling the Accuracy score: of 0.9204 significantly decreases as compared with the above model(a,b)
+
+12) Creating Model Selection 'Decision Tree'
 i).   Model Training and Prediction: Two models are trained: one using the Gini impurity criterion and 
-      the other using Entropy criterion and predictions are made using both models.
-ii).  Model Evaluation: Both models are evaluated using confusion matrix, accuracy, and classification report.
+      the other using the Entropy criterion and predictions are made using both models.
+ii).  Model Evaluation: Both models are evaluated using a confusion matrix, accuracy, and classification report.
 iii). Visualization: The decision trees for both models are visualized using plot_tree from sklearn.tree.
+
+13). Creating Model Selection: Evaluated RandomForestClassifier 
+Results: The Random Forest Classifier Model has having Accuracy score of 0.9996 which is better than the above-trained model

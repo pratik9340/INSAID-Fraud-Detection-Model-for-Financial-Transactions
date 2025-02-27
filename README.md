@@ -84,7 +84,8 @@ b).  Using stratified sampling to handle class imbalance the Accuracy score achi
 i).  StandardScaler: Using this feature scaling the Accuracy score: of 0.9346 significantly decreases as compared with the above model(a,b)
 ii). MinMaxScaler:   Using this feature scaling the Accuracy score: of 0.9204 significantly decreases as compared with the above model(a,b)
 
-12). Creating Model Selection 'Decision Tree'
+12). Creating Model Selection 'Decision Tree'.
+
 i).   Model Training and Prediction: Two models are trained: one using the Gini impurity criterion and 
       the other using the Entropy criterion and predictions are made using both models.
 ii).  Model Evaluation: Both models are evaluated using a confusion matrix, accuracy, and classification report.

@@ -91,8 +91,12 @@ i).   Model Training and Prediction: Two models are trained: one using the Gini 
 ii).  Model Evaluation: Both models are evaluated using a confusion matrix, accuracy, and classification report.
 iii). Visualization: The decision trees for both models are visualized using plot_tree from sklearn.tree.
 
+Results of the Model 'Decision Tree' using 'Gini impurity criterion' and 'Entropy criterion' are same.
+Accuracy score by 'Gini impurity criterion': 0.9989
+Accuracy score by 'Entropy criterion': 0.9989
+
 13). Creating Model Selection: Evaluated RandomForestClassifier 
 Results: The Random Forest Classifier Model has an Accuracy score of 0.9996 which is better than the above-trained model
 
 14). Creating Model Selection: XGBOOST model for training 
-The XGBOOST Model has an Accuracy score of 99.87269395311993 which is not better than the Random forest model
+The XGBOOST Model has an Accuracy score of 0.9987 which is not better than the Random forest model

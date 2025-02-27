@@ -13,17 +13,17 @@ Expectations: Your task is to execute the process for proactive detection of fra
 
 Here there is a step-by-step process in which the above objective is achieved
 
-1) Reading data from .csv (Comma Separated Value) file into DataFrame using pandas 
+1). Reading data from .csv (Comma Separated Value) file into DataFrame using pandas 
 
-2) Check the numerical and categorical features and find the missing values in DataFrame. 
+2). Check the numerical and categorical features and find the missing values in DataFrame. 
 There are a total of 8 numerical features
 There are a total of 3 categorical features
 Finding the number of missing values in DataFrame, there is no null value in all the column 
 
-3) Plotting the outlier using the matplotlib library 
+3). Plotting the outlier using the matplotlib library 
 Hence the data is large converting column values to logarithmic values for better analysis of the data distribution of column ['oldbalanceOrg', 'oldbalanceDest', 'amount']
 
-4) Analysis of data of Column 'type' in the data frame
+4). Analysis of data of Column 'type' in the data frame
 Here, the Categorical column type of transaction is important Whereas other Categorical columns like 'nameOrig', 'nameDest' Don't contain any significance toward the model training, analysis, or prediction.
 Here is some interesting insight from the data of column 'type' 
 Transaction type TRANSFER, CASH_OUT are most prone to get fraud whereas other types of transactions 'PAYMENT', 'DEBIT', and 'CASH_IN' don't have any fraud cases reported
@@ -40,7 +40,7 @@ Using Numeric values to find the Correlation
 Any NaN values are automatically excluded. To ignore any non-numeric values, use the parameter numeric_only = True
 
 By plotting the correlation matrix in grayscale, the color code for black is 0 and the color code for white is 255 in grayscale
- This Correlation matrix looks fairly good, therefore the Correlation between the same column is high, like corr between the amount-amount column is 1 high positive Correlation. This means that we can find the column which is highly correlated positively or negatively to each other or with the target column. On this basis, we can verify/make various assumptions that hold true for further analysis of the model.
+ This Correlation matrix looks fairly good, therefore the Correlation between the same column is high, like corr between the amount-amount column is 1 high positive Correlation. This means that we can find the column which is highly correlated positively or negatively to each other or with the target column. On this basis, we can verify/make various assumptions that hold for further analysis of the model.
 
 8). Getting Variance Inflation Factor (VIF) to check for multi-collinearity 
 Variance Inflation Factor (VIF) provides a measure of multicollinearity among the independent variables in a multiple regression model.
@@ -66,7 +66,8 @@ This approach helps you decide which variables to drop based on redundancy.
 10). Model Building using Logistic Regression model from sklearn linear_model and model evaluation metrics accuracy_score, classification_report, confusion_matrix
 
 Key insight after the Logistic Regression model with training through train_test_split:
-
+a).  Using simple train_test_split the Accuracy score achieved of 0.9987
+b).  Using stratified sampling to handle class imbalance the Accuracy score achieved of 0.9987
 
 11). Feature Scaling As we are aware Logistic Regression is sensitive to the scaling of the input features.
 
@@ -83,11 +84,14 @@ b).  Using stratified sampling to handle class imbalance the Accuracy score achi
 i).  StandardScaler: Using this feature scaling the Accuracy score: of 0.9346 significantly decreases as compared with the above model(a,b)
 ii). MinMaxScaler:   Using this feature scaling the Accuracy score: of 0.9204 significantly decreases as compared with the above model(a,b)
 
-12) Creating Model Selection 'Decision Tree'
+12). Creating Model Selection 'Decision Tree'
 i).   Model Training and Prediction: Two models are trained: one using the Gini impurity criterion and 
       the other using the Entropy criterion and predictions are made using both models.
 ii).  Model Evaluation: Both models are evaluated using a confusion matrix, accuracy, and classification report.
 iii). Visualization: The decision trees for both models are visualized using plot_tree from sklearn.tree.
 
 13). Creating Model Selection: Evaluated RandomForestClassifier 
-Results: The Random Forest Classifier Model has having Accuracy score of 0.9996 which is better than the above-trained model
+Results: The Random Forest Classifier Model has an Accuracy score of 0.9996 which is better than the above-trained model
+
+14). Creating Model Selection: XGBOOST model for training 
+The XGBOOST Model has an Accuracy score of 99.87269395311993 which is not better than the Random forest model

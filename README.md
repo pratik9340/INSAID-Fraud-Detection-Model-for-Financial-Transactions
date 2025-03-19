@@ -100,3 +100,12 @@ Results: The Random Forest Classifier Model has an Accuracy score of 0.9996 whic
 
 14). Creating Model Selection: XGBOOST model for training 
 The XGBOOST Model has an Accuracy score of 0.9987 which is not better than the Random forest model
+
+15). Feature Engineering
+Created new feature balance_change = oldbalanceOrg - newbalanceOrig.
+Derived transaction_speed = amount/step to detect fast withdrawals.
+isFlaggedFraud: Business rule-based flag for illegal transactions.
+
+16). Using GridSearchCV for hyperparameter tuning for the trained model 
+This is used to find the optimal parameters to increase the model's accuracy and 
+performance up to a certain extent under the trade-off with time and costing 

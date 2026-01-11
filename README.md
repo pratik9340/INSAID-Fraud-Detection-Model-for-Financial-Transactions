@@ -1,6 +1,6 @@
 # Fraud Detection for Financial Transactions 
 
-📌 Project Overview
+# Project Overview
 
 This project implements an end-to-end machine learning pipeline for proactive fraud detection in financial transactions.
 The solution focuses on data quality, feature engineering, class imbalance handling, and model selection to accurately identify fraudulent activities at scale.
@@ -13,7 +13,7 @@ Target: Binary classification (Fraud vs Non-Fraud)
 
 Outcome: Achieved 99.96% accuracy using Random Forest with optimized features
 
-🧠 Business Problem
+# Business Problem
 
 Financial institutions face significant losses due to fraudulent transactions, often hidden within highly imbalanced datasets.
 
@@ -27,7 +27,7 @@ Need for interpretable and scalable ML models
 
 Early detection of high-risk transactions
 
-🛠️ Tech Stack
+# Tech Stack
 
 Languages: Python
 
@@ -37,8 +37,8 @@ ML Models: Logistic Regression, Decision Tree, Random Forest, XGBoost
 
 Techniques: Feature Engineering, VIF, GridSearchCV, Stratified Sampling
 
-🔄 End-to-End Pipeline
-1️⃣ Data Ingestion
+# End-to-End Pipeline
+1️). Data Ingestion
 
 Loaded transaction data from .csv into Pandas DataFrame
 
@@ -46,7 +46,7 @@ Identified 8 numerical and 3 categorical features
 
 Verified no missing values
 
-2️⃣ Exploratory Data Analysis (EDA)
+2️). Exploratory Data Analysis (EDA)
 
 Log-transformed highly skewed features (amount, oldbalanceOrg, oldbalanceDest)
 
@@ -58,7 +58,7 @@ CASH_OUT
 
 Confirmed no fraud cases in PAYMENT, DEBIT, CASH_IN
 
-3️⃣ Feature Selection & Encoding
+3️). Feature Selection & Encoding
 
 Dropped non-informative identifiers (nameOrig, nameDest)
 
@@ -66,7 +66,7 @@ Applied One-Hot Encoding on transaction type
 
 Performed Pearson correlation analysis to assess feature relationships
 
-4️⃣ Handling Multicollinearity
+4️). Handling Multicollinearity
 
 Computed Variance Inflation Factor (VIF)
 
@@ -78,7 +78,7 @@ oldbalanceDest
 
 Ensured remaining features had VIF < 5
 
-5️⃣ Feature Engineering
+5️). Feature Engineering
 
 Created new business-driven features:
 
@@ -90,13 +90,13 @@ isFlaggedFraud (rule-based indicator)
 
 These features significantly improved fraud signal detection.
 
-6️⃣ Class Imbalance Handling
+6️). Class Imbalance Handling
 
 Used Stratified Train-Test Split
 
 Ensured minority fraud class was properly represented
 
-🤖 Model Development & Evaluation
+# Model Development & Evaluation
 Models Tested
 Model	Accuracy
 Logistic Regression	99.87%
@@ -112,9 +112,9 @@ Precision, Recall, F1-Score
 
 Accuracy
 
-➡️ Random Forest outperformed all models and provided robust fraud detection with minimal false negatives.
+# Random Forest outperformed all models and provided robust fraud detection with minimal false negatives.
 
-🔍 Key Fraud Indicators
+# Key Fraud Indicators
 
 Large transaction amounts
 
@@ -124,9 +124,9 @@ High transaction velocity
 
 TRANSFER and CASH_OUT operations
 
-✔️ These indicators align with real-world fraud patterns, validating model assumptions.
+These indicators align with real-world fraud patterns, validating model assumptions.
 
-🛡️ Fraud Prevention Recommendations
+# Fraud Prevention Recommendations
 
 Real-time flagging of high-risk transactions
 
@@ -136,7 +136,7 @@ Threshold-based alerts on balance changes
 
 Continuous model retraining with recent data
 
-📈 Measuring Success Post-Deployment
+# Measuring Success Post-Deployment
 
 Reduction in false negatives
 
@@ -146,7 +146,7 @@ Monitoring fraud loss reduction over time
 
 Model performance drift analysis
 
-🚀 Key Takeaways (Recruiter Highlight)
+# Key Takeaways (Recruiter Highlight)
 
 Built production-ready ML pipeline
 
